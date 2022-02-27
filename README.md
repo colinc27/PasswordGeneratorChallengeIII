@@ -1,4 +1,4 @@
-# Password Generator Starter Code
+# Password Generator
  
 ## Project Description
 Generate random passwords based on certain criteria such as character type and password length
