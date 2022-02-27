@@ -13,7 +13,10 @@ function writePassword() {
    var password = generate
    var passwordText = document.querySelector("#password");
    //Ask user about password criteria
-   var characterS = window.prompt('How many characters long would you like your password?');
+   var characterS = window.prompt('How many characters long would you like your password between 8 and 128 characters? Please enter your value as a number');
+      while( characterS > 128 || characterS < 8 || isNaN(characterS)) {
+         var characterS = window.prompt('ERROR PLEASE RESUBMIT!!\n How many characters long would you like your password between 8 and 128 characters? Please enter your value as a number');
+      }
    var upperQ = window.confirm("Would you like your password to have upper case letters? (OK for yes, Cancel for no)");
    var numberQ = window.confirm("Would you like your password to have numbers? (OK for yes, Cancel for no)");
    var specialQ = window.confirm("Would you like your password to have special characters? (OK for yes, Cancel for no)");
@@ -22,16 +25,15 @@ function writePassword() {
    if(upperQ) characterAdd = characterAdd.concat(upper);
    if(numberQ) characterAdd = characterAdd.concat(numbers);
    if(specialQ) characterAdd = characterAdd.concat(symbol);
-   console.log(characterAdd);
-   //setup for loop that crates password
+   //setup for loop that creates password
    var passwordText = [];
    for(i = 0; i < characterS; i++){
       var passChar = characterAdd[Math.floor(Math.random()*characterAdd.length)]
       passwordText.push(String(passChar));
    }
-   console.log(passwordText);
    var password = passwordText.join("");
-   console.log(password)
+   console.log(passwordText);
+   console.log(password);
 }
 
 // Add event listener to generate button
