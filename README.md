@@ -21,6 +21,7 @@ THEN a password is generated that matches the selected criteria
 THEN the password is either displayed in an alert or written to the page
 
 ## Screenshots and Links
-
+Link: [The password generator](https://colinc27.github.io/PasswordGeneratorChallengeIII/)
+![finalwebpage](./Develop/screenshot.JPG "final webpage")
 
 ## Made by Colin Christoph
